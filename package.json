@@ -6,7 +6,8 @@
   "scripts": {
     "smoke": "npm run lint && mocha ./test/smoke",
     "ui": "npm run lint && wdio test/ui/config/wdio.local.conf.js",
-    "lint": "eslint ./"
+    "lint": "eslint ./",
+    "ping": "node ./test/smoke/tests/ping.js"
   },
   "repository": {
     "type": "git",
@@ -23,7 +24,8 @@
     "@wdio/mocha-framework": "^5.14.4",
     "@wdio/selenium-standalone-service": "^5.13.2",
     "@wdio/spec-reporter": "^5.14.5",
-    "mocha": "^6.2.1"
+    "mocha": "^6.2.1",
+    "ping": "^0.2.2"
   },
   "devDependencies": {
     "eslint": "^6.5.1",
