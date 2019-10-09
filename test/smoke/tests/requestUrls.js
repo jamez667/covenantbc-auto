@@ -14,13 +14,13 @@ Promise.map(
   urls,
   Promise.coroutine(function*(url) {
     url = url.url;
-    console.log("about to send request for " + url);
     yield delay();
+    console.time("sendRequest" + url);
     let result = yield request({
       uri: url,
       simple: false //  <---  <---  <---  <---
     });
-    console.log(result);
+    console.timeEnd("sendRequest" + url);
   }),
   { concurrency: 1 }
 );
