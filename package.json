@@ -4,8 +4,8 @@
   "description": "Automated testing for covenanthousebc.org",
   "main": "index.js",
   "scripts": {
-    "api": "npm run lint && mocha",
-    "smoke": "npm run lint && wdio test/e2e/config/wdio.local.conf.js",
+    "smoke": "npm run lint && mocha ./test/smoke",
+    "ui": "npm run lint && wdio test/ui/config/wdio.local.conf.js",
     "lint": "eslint ./"
   },
   "repository": {

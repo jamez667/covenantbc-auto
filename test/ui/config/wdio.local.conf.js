@@ -3,7 +3,7 @@ module.exports = {
     services: ['selenium-standalone', 'devtools'],
     capabilities: [{ browserName: 'chrome' }],
     specs: [
-      './test/e2e/tests/smoke.js',
+      './test/ui/tests/ui.js',
     ],
   },
 };
