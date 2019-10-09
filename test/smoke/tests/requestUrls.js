@@ -18,7 +18,7 @@ Promise.map(
     console.time("sendRequest" + url);
     let result = yield request({
       uri: url,
-      simple: false //  <---  <---  <---  <---
+      simple: false
     });
     console.timeEnd("sendRequest" + url);
   }),
