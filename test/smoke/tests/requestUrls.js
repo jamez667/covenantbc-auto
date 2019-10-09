@@ -22,5 +22,5 @@ Promise.map(
     });
     console.timeEnd("sendRequest" + url);
   }),
-  { concurrency: 1 }
+  { concurrency: concurrency }
 );
