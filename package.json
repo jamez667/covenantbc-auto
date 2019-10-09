@@ -25,12 +25,14 @@
     "@wdio/mocha-framework": "^5.14.4",
     "@wdio/selenium-standalone-service": "^5.13.2",
     "@wdio/spec-reporter": "^5.14.5",
+    "@wdio/sync": "^5.14.4",
     "mocha": "^6.2.1",
     "ping": "^0.2.2",
     "request-promise": "^4.2.4",
     "bluebird": "^3.7.0"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
     "eslint": "^6.5.1",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2"
