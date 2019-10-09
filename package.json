@@ -8,7 +8,8 @@
     "ui": "npm run lint && wdio test/ui/config/wdio.local.conf.js",
     "lint": "eslint ./",
     "ping": "node ./test/smoke/tests/ping.js",
-    "helper": "mocha ./test/helpers/testContentChecker.js"
+    "helper": "mocha ./test/helpers/testContentChecker.js",
+    "requesturls": "node ./test/smoke/tests/requestUrls.js"
   },
   "repository": {
     "type": "git",
@@ -26,7 +27,9 @@
     "@wdio/selenium-standalone-service": "^5.13.2",
     "@wdio/spec-reporter": "^5.14.5",
     "mocha": "^6.2.1",
-    "ping": "^0.2.2"
+    "ping": "^0.2.2",
+    "request-promise": "^4.2.4",
+    "bluebird": "^3.7.0"
   },
   "devDependencies": {
     "eslint": "^6.5.1",
