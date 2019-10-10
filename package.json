@@ -4,9 +4,9 @@
   "description": "Automated testing for covenanthousebc.org",
   "main": "index.js",
   "scripts": {
-    "build": "make build",
+    "build": "yarn run smoke",
     "start": "make server",
-    "smoke": "mocha --timeout 5000 ./test/smoke/tests/requestUrls.js --reporter mochawesome",
+    "smoke": "mocha --timeout 5000 ./test/smoke/tests --reporter mochawesome --reporter-options reportFilename=index",
     "ui": "npm run lint && wdio test/ui/config/wdio.local.conf.js && npm run report",
     "lint": "eslint ./test",
     "lint:fix": "eslint --fix ./test",
