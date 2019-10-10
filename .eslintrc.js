@@ -5,8 +5,8 @@ module.exports = {
     node: true,
     mocha: true,
   },
-  plugins: ['wdio'],
-  extends: ['airbnb-base', 'plugin:wdio/recommended'],
+  plugins: ['prettier', 'wdio'],
+  extends: ['plugin:prettier/recommended', 'plugin:wdio/recommended'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
@@ -14,5 +14,7 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2018,
   },
-  rules: {},
+  rules: {
+    'prettier/prettier': 'error',
+  },
 };

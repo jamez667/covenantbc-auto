@@ -1,5 +1,3 @@
 describe('A smoke test', () => {
-  it('A test', () => {
-
-  });
+  it('A test', () => {});
 });
