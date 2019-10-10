@@ -1,6 +1,10 @@
 FROM node:alpine
 
+RUN apk add make
+
 ADD package.json .
-RUN npm install
+RUN yarn install
 
 ADD . .
+
+RUN make ping
