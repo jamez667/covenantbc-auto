@@ -6,13 +6,13 @@ const contentChecker = require('./../../helpers/contentChecker');
 const concurrency = 1; // Don't wanna blow their server. So, one request at a time.
 const delayms = 2000; // Just adding some delay to not blow their server
 
-const delay = Promise.coroutine(function* () {
+const delay = Promise.coroutine(function*() {
   yield Promise.delay(delayms);
 });
 
 Promise.map(
   urls,
-  Promise.coroutine(function* (urlObj) {
+  Promise.coroutine(function*(urlObj) {
     const { url } = urlObj;
     yield delay();
     console.time(`sendRequest${url}`);

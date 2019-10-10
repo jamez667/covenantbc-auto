@@ -1,5 +1,3 @@
 describe('A ui test', () => {
-  it('A test', () => {
-
-  });
+  it('A test', () => {});
 });
