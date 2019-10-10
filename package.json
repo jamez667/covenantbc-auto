@@ -5,13 +5,13 @@
   "main": "index.js",
   "scripts": {
     "smoke": "npm run lint && mocha ./test/smoke",
-    "ui": "npm run lint && wdio test/ui/config/wdio.local.conf.js && npm run allure",
+    "ui": "npm run lint && wdio test/ui/config/wdio.local.conf.js && npm run report",
     "lint": "eslint ./test",
     "lint:fix": "eslint --fix ./test",
     "ping": "node ./test/smoke/tests/ping.js",
     "helper": "mocha ./test/helpers/testContentChecker.js",
     "requesturls": "node ./test/smoke/tests/requestUrls.js",
-    "allure": "allure generate ./allure-results && allure open"
+    "report": "allure generate ./allure-results --clean && allure open"
   },
   "repository": {
     "type": "git",
@@ -34,7 +34,8 @@
     "bluebird": "^3.7.0",
     "mocha": "^6.2.1",
     "ping": "^0.2.2",
-    "request-promise": "^4.2.4"
+    "request-promise": "^4.2.4",
+    "wdio-video-reporter": "^1.4.4"
   },
   "devDependencies": {
     "chai": "^4.2.0",
