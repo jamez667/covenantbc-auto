@@ -1,5 +1,5 @@
-const Homepage = require('../pageObjects/homepage');
 const expect = require('chai').expect;
+const Homepage = require('../pageObjects/homepage');
 
 describe('Get Help Button on Homepage', () => {
   it('should go to Get Help page', () => {

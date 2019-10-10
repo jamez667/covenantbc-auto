@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "smoke": "npm run lint && mocha ./test/smoke",
-    "ui": "npm run lint && wdio test/ui/config/wdio.local.conf.js",
+    "ui": "npm run lint && wdio test/ui/config/wdio.local.conf.js && npm run allure",
     "lint": "eslint ./",
     "ping": "node ./test/smoke/tests/ping.js",
     "helper": "mocha ./test/helpers/testContentChecker.js",
-    "requesturls": "node ./test/smoke/tests/requestUrls.js"
+    "requesturls": "node ./test/smoke/tests/requestUrls.js",
+    "allure": "allure generate ./allure-results && allure open"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   "author": "Realtor.com",
   "license": "ISC",
   "dependencies": {
+    "@wdio/allure-reporter": "^5.14.5",
     "@wdio/cli": "^5.14.5",
     "@wdio/config": "^5.14.0",
     "@wdio/devtools-service": "^5.14.5",
@@ -27,15 +29,17 @@
     "@wdio/selenium-standalone-service": "^5.13.2",
     "@wdio/spec-reporter": "^5.14.5",
     "@wdio/sync": "^5.14.4",
+    "allure-commandline": "^2.13.0",
+    "bluebird": "^3.7.0",
     "mocha": "^6.2.1",
     "ping": "^0.2.2",
-    "request-promise": "^4.2.4",
-    "bluebird": "^3.7.0"
+    "request-promise": "^4.2.4"
   },
   "devDependencies": {
     "chai": "^4.2.0",
     "eslint": "^6.5.1",
     "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.18.2"
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-wdio": "^5.13.2"
   }
 }

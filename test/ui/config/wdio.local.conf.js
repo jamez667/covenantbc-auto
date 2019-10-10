@@ -8,5 +8,17 @@ module.exports = {
       './test/ui/tests/getHelp_spec.js',
       './test/ui/tests/socialMediaLinks_spec.js',
     ],
+    reporters: [
+      'spec',
+      [
+        'allure',
+        {
+          outputDir: 'allure-results',
+          disableWebdriverStepsReporting: true,
+          disableWebdriverScreenshotsReporting: true,
+        },
+      ],
+    ],
+    logLevel: 'warn',
   },
 };
