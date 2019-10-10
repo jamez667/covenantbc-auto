@@ -7,12 +7,12 @@
     "build": "make build",
     "start": "make server",
     "smoke": "npm run lint && mocha ./test/smoke",
+    "ping": "mocha ./test/smoke/tests/ping.js",
+    "requesturls": "mocha --timeout 5000 ./test/smoke/tests/requestUrls.js",
     "ui": "npm run lint && wdio test/ui/config/wdio.local.conf.js && npm run report",
     "lint": "eslint ./test",
     "lint:fix": "eslint --fix ./test",
-    "ping": "node ./test/smoke/tests/ping.js",
     "helper": "mocha ./test/helpers/testContentChecker.js",
-    "requesturls": "node ./test/smoke/tests/requestUrls.js",
     "report": "allure generate ./allure-results --clean && allure open"
   },
   "repository": {
