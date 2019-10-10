@@ -1,8 +1,8 @@
 [
-    { "url": "http://www.covenanthousebc.org", "expected": "Covenant House Vancouver provides love and hope"},
-    { "url": "https://www.covenanthousebc.org", "expected": "Covenant House Vancouver provides love and hope"},
+    { "url": "http://www.covenanthousebc.org", "expected": "<title>Covenant House Vancouver - Shelter and Hope for Homeless Youth</title>"},
+    { "url": "https://www.covenanthousebc.org", "expected": "<title>Covenant House Vancouver - Shelter and Hope for Homeless Youth</title>"},
     { "url": "https://www.covenanthousebc.org/contact-us/"},
-    { "url": "https://www.covenanthousebc.org/?s=test", "expected": "You searched for test - Covenant House Vancouver"},
+    { "url": "https://www.covenanthousebc.org/?s=test", "expected": "<title>You searched for test - Covenant House Vancouver</title>"},
     { "url": "https://www.covenanthousebc.org/about-us/our-purpose-and-principles/"},
     { "url": "https://www.covenanthousebc.org/about-us/our-history/"},
     { "url": "https://www.covenanthousebc.org/about-us/our-impact/"},
