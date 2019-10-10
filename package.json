@@ -4,6 +4,8 @@
   "description": "Automated testing for covenanthousebc.org",
   "main": "index.js",
   "scripts": {
+    "build": "make build",
+    "start": "make server",
     "smoke": "npm run lint && mocha ./test/smoke",
     "ui": "npm run lint && wdio test/ui/config/wdio.local.conf.js && npm run allure",
     "lint": "eslint ./",
@@ -32,8 +34,9 @@
     "@wdio/sync": "^5.14.4",
     "allure-commandline": "^2.13.0",
     "bluebird": "^3.7.0",
+    "http-server": "^0.11.1",
     "mocha": "^6.2.1",
-    "ping": "^0.2.2",
+    "mochawesome": "^4.1.0",
     "request-promise": "^4.2.4"
   },
   "devDependencies": {

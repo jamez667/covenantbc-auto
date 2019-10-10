@@ -1,8 +1,19 @@
-const ping = require('ping');
-
+const request = require('request-promise');
+const assert = require('assert');
 const hosts = ['www.covenanthousebc.org'];
-hosts.forEach((host) => {
-  ping.promise.probe(host).then((res) => {
-    console.log(res);
+
+describe('ping results', () => {
+  hosts.forEach((host) => {
+    describe(host, () => {
+      it('should be alive', async () => {
+        await request({ method: 'HEAD', uri: `http://${host}` })
+          .then((response) => {
+            assert.ok(true);
+          })
+          .catch((e) => {
+            assert.ok(false, JSON.stringify(e));
+          });
+      });
+    });
   });
 });
