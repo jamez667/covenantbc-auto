@@ -13,7 +13,8 @@
     "lint": "eslint ./test",
     "lint:fix": "eslint --fix ./test",
     "helper": "mocha ./test/helpers/testContentChecker.js",
-    "report": "allure generate ./allure-results --clean && allure open"
+    "report": "npm run remove-videos && allure generate ./allure-results --clean && allure open",
+    "remove-videos": "rm -rf _results_/"
   },
   "repository": {
     "type": "git",
