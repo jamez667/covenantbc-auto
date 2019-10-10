@@ -1,4 +1,5 @@
 const contentCheckerHelper = require('./contentChecker');
+const assert = require('assert');
 
 describe('Testing contentChecker.js', () => {
   describe('Functions', () => {
@@ -7,25 +8,30 @@ describe('Testing contentChecker.js', () => {
         'http://www.covenanthousebc.org',
       );
 
-      console.log('***** contentExpected');
-      console.log(contentExpected);
+      assert.equal(contentExpected, 'Covenant House Vancouver');
     });
     it('getDynamicContentToCheck: It should return a dynamic value based on the URL', () => {
       let contentExpected = contentCheckerHelper.getDynamicContentToCheck(
         'https://www.covenanthousebc.org/about-us/our-purpose-and-principles/',
       );
 
-      console.log('***** contentExpected');
-      console.log(contentExpected);
+      assert.equal(contentExpected, 'our purpose and principles');
     });
-    it('checkContentFromURL: It should return a dynamic value based on the URL', () => {
+    it('checkContentFromURL: It should succeed', () => {
+      let contentExpected = contentCheckerHelper.checkContentFromURL(
+        'http://www.covenanthousebc.org',
+        '<title>Covenant House Vancouver - Shelter and Hope for Homeless Youth</title>',
+      );
+
+      assert.equal(contentExpected, true);
+    });
+    it('checkContentFromURL: It should fail', () => {
       let contentExpected = contentCheckerHelper.checkContentFromURL(
         'http://www.covenanthousebc.org',
         'some html',
       );
 
-      console.log('***** contentExpected');
-      console.log(contentExpected);
+      assert.equal(contentExpected, false);
     });
   });
 });
