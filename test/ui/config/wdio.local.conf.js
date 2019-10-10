@@ -10,6 +10,7 @@ module.exports = {
       // './tests/ui/tests/ui.js',
       './test/ui/tests/getHelp_spec.js',
       './test/ui/tests/socialMediaLinks_spec.js',
+      './test/ui/tests/donationPage_spec.js',
     ],
     framework: 'mocha',
     mochaOpts: {
