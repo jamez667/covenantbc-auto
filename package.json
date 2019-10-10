@@ -8,6 +8,7 @@
     "ui": "npm run lint && wdio test/ui/config/wdio.local.conf.js",
     "lint": "eslint ./",
     "ping": "node ./test/smoke/tests/ping.js",
+    "helper": "mocha ./test/helpers/testContentChecker.js",
     "requesturls": "node ./test/smoke/tests/requestUrls.js"
   },
   "repository": {
