@@ -11,6 +11,8 @@ module.exports = {
       './test/ui/tests/getHelp_spec.js',
       './test/ui/tests/socialMediaLinks_spec.js',
       './test/ui/tests/donationPage_spec.js',
+      './test/ui/tests/email.test.js',
+      './test/ui/tests/search.test.js',
     ],
     framework: 'mocha',
     mochaOpts: {
