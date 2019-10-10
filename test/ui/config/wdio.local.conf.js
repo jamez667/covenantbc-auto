@@ -3,6 +3,10 @@ module.exports = {
     sync: true,
     services: ['selenium-standalone', 'devtools'],
     capabilities: [{ browserName: 'chrome' }],
-    specs: ['./test/ui/tests/ui.js', './test/ui/tests/getHelp_spec.js'],
+    specs: [
+      // './tests/ui/tests/ui.js',
+      './test/ui/tests/getHelp_spec.js',
+      './test/ui/tests/socialMediaLinks_spec.js',
+    ],
   },
 };
