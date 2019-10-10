@@ -9,12 +9,15 @@ module.exports = {
         urlToCheck.substring(1, urlToCheck.lastIndexOf('/')).lastIndexOf('/') +
           2,
       )
-      .split('-').join(' ');
+      .split('-')
+      .join(' ');
 
     return contentExpectedDynamic ? contentExpectedDynamic : defaultText;
   },
   checkContent: function(contentToCheck, contentExpected) {
-    return contentToCheck.toUpperCase().indexOf(contentExpected.toUpperCase()) > -1;
+    return (
+      contentToCheck.toUpperCase().indexOf(contentExpected.toUpperCase()) > -1
+    );
   },
   checkContentFromURL: function(urlToCheck, contentToCheck) {
     let urlConfig = urlsConfig.filter(
