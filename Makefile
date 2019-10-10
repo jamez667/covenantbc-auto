@@ -11,4 +11,4 @@ test:
 docker_build:
 	docker build -t test-auto .
 
-.PHONY: docker_build test build
+.PHONY: docker_build test build server

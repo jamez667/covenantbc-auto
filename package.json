@@ -7,13 +7,13 @@
     "build": "make build",
     "start": "make server",
     "smoke": "npm run lint && mocha ./test/smoke",
-    "ui": "npm run lint && wdio test/ui/config/wdio.local.conf.js && npm run allure",
-    "lint": "eslint ./",
-    "lint:fix": "eslint --fix ./",
+    "ui": "npm run lint && wdio test/ui/config/wdio.local.conf.js && npm run report",
+    "lint": "eslint ./test",
+    "lint:fix": "eslint --fix ./test",
     "ping": "node ./test/smoke/tests/ping.js",
     "helper": "mocha ./test/helpers/testContentChecker.js",
     "requesturls": "node ./test/smoke/tests/requestUrls.js",
-    "allure": "allure generate ./allure-results && allure open"
+    "report": "allure generate ./allure-results --clean && allure open"
   },
   "repository": {
     "type": "git",
@@ -37,7 +37,8 @@
     "http-server": "^0.11.1",
     "mocha": "^6.2.1",
     "mochawesome": "^4.1.0",
-    "request-promise": "^4.2.4"
+    "request-promise": "^4.2.4",
+    "wdio-video-reporter": "^1.4.4"
   },
   "devDependencies": {
     "chai": "^4.2.0",
