@@ -10,7 +10,7 @@
     "lint:fix": "eslint --fix ./",
     "ping": "mocha ./test/smoke/tests/ping.js",
     "helper": "mocha ./test/helpers/testContentChecker.js",
-    "requesturls": "mocha ./test/smoke/tests/requestUrls.js",
+    "requesturls": "mocha --timeout 5000 ./test/smoke/tests/requestUrls.js",
     "allure": "allure generate ./allure-results && allure open"
   },
   "repository": {
