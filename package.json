@@ -8,9 +8,9 @@
     "ui": "npm run lint && wdio test/ui/config/wdio.local.conf.js && npm run allure",
     "lint": "eslint ./",
     "lint:fix": "eslint --fix ./",
-    "ping": "node ./test/smoke/tests/ping.js",
+    "ping": "mocha ./test/smoke/tests/ping.js",
     "helper": "mocha ./test/helpers/testContentChecker.js",
-    "requesturls": "node ./test/smoke/tests/requestUrls.js",
+    "requesturls": "mocha ./test/smoke/tests/requestUrls.js",
     "allure": "allure generate ./allure-results && allure open"
   },
   "repository": {
