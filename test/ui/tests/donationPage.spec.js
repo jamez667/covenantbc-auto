@@ -1,5 +1,5 @@
 const expect = require('chai').expect;
-const DonationPage = require('../pageObjects/donationpage');
+const DonationPage = require('../pageObjects/donation.page');
 
 describe('Donation Page', () => {
   beforeEach(() => {
