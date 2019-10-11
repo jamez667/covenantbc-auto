@@ -1,5 +1,5 @@
 const expect = require('chai').expect;
-const Homepage = require('../pageObjects/homepage');
+const Homepage = require('../pageObjects/home.page');
 
 const socialMedias = [
   {

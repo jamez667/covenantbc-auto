@@ -1,5 +1,5 @@
-const homePage = require('./page-objects/HomePage.page.js');
-const searchPage = require('./page-objects/SearchPage.page.js');
+const homePage = require('../pageObjects/home.page');
+const searchPage = require('../pageObjects/search.page');
 const assert = require('assert');
 const expect = require('chai').expect;
 

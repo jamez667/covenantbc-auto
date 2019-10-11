@@ -14,6 +14,12 @@ class HomePage {
   get emailButton() {
     return $('#mc-embedded-subscribe');
   }
+  get getHelpButton() {
+    const getHelpButton = $('.custom-nav-items .get-help a');
+    getHelpButton.waitForDisplayed();
+    getHelpButton.waitForEnabled();
+    return getHelpButton;
+  }
   open() {
     browser.url('https://www.covenanthousebc.org/');
   }

@@ -8,11 +8,7 @@ module.exports = {
     capabilities: [{ browserName: 'chrome' }],
     specs: [
       // './tests/ui/tests/ui.js',
-      './test/ui/tests/getHelp_spec.js',
-      './test/ui/tests/socialMediaLinks_spec.js',
-      './test/ui/tests/donationPage_spec.js',
-      './test/ui/tests/email.test.js',
-      './test/ui/tests/search.test.js',
+      './test/ui/tests/**.spec.js',
     ],
     maxInstances: 3,
     framework: 'mocha',
@@ -25,7 +21,7 @@ module.exports = {
         video,
         {
           saveAllVideos: true,
-          videoSlowdownMultiplier: 3,
+          videoSlowdownMultiplier: 8,
           videoRenderTimeout: 5,
         },
       ],
