@@ -11,10 +11,13 @@ module.exports = {
       './test/ui/tests/getHelp_spec.js',
       './test/ui/tests/socialMediaLinks_spec.js',
       './test/ui/tests/donationPage_spec.js',
+      './test/ui/tests/email.test.js',
+      './test/ui/tests/search.test.js',
     ],
+    maxInstances: 3,
     framework: 'mocha',
     mochaOpts: {
-      timeout: 60000,
+      timeout: 120000,
     },
     reporters: [
       'spec',
